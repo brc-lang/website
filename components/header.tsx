@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ThemeToggle } from "./theme-toggle"
-import { cn } from "@/lib/utils"
+import { cn, basePath } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
@@ -26,9 +26,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 group">
             <img
-              src="/images/image-2025-12-24-01-58-31.png"
+              src={`${basePath}/images/logo.png`}
               alt="BreadCrumbs Logo"
-              className="w-10 h-10 transition-transform duration-300 group-hover:rotate-6"
+              width={40}
+              height={40}
+              className="transition-transform duration-300 group-hover:rotate-6"
             />
             <span className="font-serif text-xl font-bold text-foreground hidden sm:block">BreadCrumbs</span>
           </Link>

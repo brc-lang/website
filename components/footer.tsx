@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { basePath } from "@/lib/utils"
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/images/image-2025-12-24-01-58-31.png" alt="BreadCrumbs Logo" className="w-8 h-8" />
+              <img src={`${basePath}/images/logo.png`} alt="BreadCrumbs Logo" width={32} height={32} />
               <span className="font-serif text-lg font-bold">BreadCrumbs</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">

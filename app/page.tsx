@@ -1,4 +1,5 @@
 import type React from "react"
+import { basePath } from "@/lib/utils"
 import { CrumbButton } from "@/components/crumb-button"
 import { Code, Zap, Users, BookOpen, ArrowRight } from "lucide-react"
 
@@ -11,8 +12,10 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <div className="mb-8 animate-in fade-in zoom-in duration-500">
               <img
-                src="/images/image-2025-12-24-01-58-31.png"
+                src={`${basePath}/images/logo.png`}
                 alt="BreadCrumbs Logo"
+                width={160}
+                height={160}
                 className="w-32 h-32 md:w-40 md:h-40 mx-auto"
               />
             </div>
@@ -93,7 +96,7 @@ export default function HomePage() {
                 <span className="w-3 h-3 rounded-full bg-destructive/60" />
                 <span className="w-3 h-3 rounded-full bg-chart-4/60" />
                 <span className="w-3 h-3 rounded-full bg-chart-3/60" />
-                <span className="ml-2 text-sm text-muted-foreground font-mono">hello.bc</span>
+                <span className="ml-2 text-sm text-muted-foreground font-mono">hello.brc</span>
               </div>
               <pre className="p-4 overflow-x-auto text-sm font-mono">
                 <code>{`// Hello World in BreadCrumbs

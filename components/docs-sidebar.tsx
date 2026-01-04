@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import { cn, basePath } from "@/lib/utils"
 import { docsConfig } from "@/lib/docs-config"
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
@@ -21,7 +21,7 @@ export function DocsSidebar() {
     <aside className="w-64 shrink-0 border-r border-border bg-sidebar hidden lg:block">
       <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto p-4">
         <div className="flex items-center gap-2 mb-6 pb-4 border-b border-sidebar-border">
-          <img src="/images/image-2025-12-24-01-58-31.png" alt="BreadCrumbs" className="w-8 h-8" />
+          <img src={`${basePath}/images/logo.png`} alt="BreadCrumbs" width={32} height={32} />
           <span className="font-serif font-bold text-sidebar-foreground">BreadCrumbs</span>
         </div>
 

@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
 
-import { Analytics } from "@vercel/analytics/next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { basePath } from "@/lib/utils"
 import "./globals.css"
 
 import { Inter, Playfair_Display, JetBrains_Mono, Libre_Baskerville as V0_Font_Libre_Baskerville, IBM_Plex_Mono as V0_Font_IBM_Plex_Mono, Lora as V0_Font_Lora } from 'next/font/google'
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "BreadCrumbs - A Modern Programming Language",
   description: "BreadCrumbs is a modern programming language for enthusiasts who love clean, expressive code.",
   icons: {
-    icon: "/images/image-2025-12-24-01-58-31.png",
+    icon: `${basePath}/images/logo.png`,
   },
     generator: 'v0.app'
 }
@@ -39,7 +39,6 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
-        <Analytics />
       </body>
     </html>
   )
